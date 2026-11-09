@@ -1,3 +1,7 @@
+<div align="center">
+
+<img src="./latex/images/etf.png" width="110">
+
 # Hardwired Neural Network Programming
 
 _(bs. Ožičeno programiranje neuralnih mreža)_
@@ -6,11 +10,12 @@ Term paper on the topic of hardwired neural network programming, written as a
 contribution to _Enciklopedija programskih jezika_ (the Encyclopedia of
 Programming Languages), written by prof. Samir Ribić.
 
-**Author** A. Mustafić  
- **Course** Programming Languages and Compilers, Computer Science BSc., prof. Samir Ribić  
-**Institution** Faculty of Electrical Engineering, University of Sarajevo  
- **Academic year** 2026/27  
- **Language** Bosnian
+**Author:** A. Mustafić  
+ **Course:** Programming Languages and Compilers, Computer Science BSc., prof. Samir Ribić  
+**Institution:** Faculty of Electrical Engineering, University of Sarajevo  
+ **Language:** Bosnian
+
+ </div>
 
 ## Outline
 
