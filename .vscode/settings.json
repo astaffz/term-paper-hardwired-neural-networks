@@ -1,0 +1,9 @@
+{
+  // LaTeX Workshop: build only through latex/.latexmkrc (XeLaTeX, output to latex/build/).
+  // The default "latexmk" recipe adds -pdf (= pdfLaTeX, breaks fontspec) and its own -outdir.
+  "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)",
+  // Ignore "% !TEX program" lines, which would run plain xelatex into latex/.
+  "latex-workshop.latex.build.enableMagicComments": false,
+  // Where the PDF viewer and SyncTeX look for the output.
+  "latex-workshop.latex.outDir": "%DIR%/build"
+}

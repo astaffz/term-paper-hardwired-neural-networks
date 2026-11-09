@@ -1,0 +1,86 @@
+
+\documentclass[11pt]{book}
+% GLAVNI FAJL. Tekst se piše u sections/*.tex; ovaj fajl ih samo uključuje redom.
+% Kompajlira se uvijek ovaj fajl (sections imaju „% !TEX root = ../OzicaneNeuronskeMreze.tex“, pa
+% editor sam kompajlira glavni fajl i kad se snima sekcija).
+% Kompajlirati XeLaTeX-om (ne pdfLaTeX-om). latexmk pokrenut iz ovog foldera čita
+% .latexmkrc i sve pomoćne fajlove stavlja u build/.
+% Fontovi Source Serif/Sans/Code Pro moraju biti instalirani; ako nisu, zakomentarisati
+% linije 7, 8 i 9 u langencyc.sty.
+% Putanje do slika se pišu u odnosu na ovaj folder (i iz sekcija), npr. slike/neuron.png.
+% Pregled svih naredbi predloška (listinzi, slike, tabele, gramatike) je na dnu fajla,
+% iza \end{document}. Original predloška: University/courses/programski-jezici-i-prevodioci/
+% materials/assignments/seminarski-uzorak/template.tex
+\usepackage{langencyc}
+\usepackage{url} % linkovi u bibliografiji
+\begin{document}
+
+
+\setcounter{chapter}{4}
+\setcounter{page}{1}
+
+
+\lstset{language=VHDL}
+
+\chapter{Ožičeno programiranje neuralnih mreža}
+\begin{center}
+    Aid Mustafić
+\end{center}
+
+\input{sections/00-uvod}
+\input{sections/01-formalni-neuron}
+\input{sections/02-historijski-poceci}
+\input{sections/03-vlsi-fpga}
+\input{sections/04-asic-tpu}
+\input{sections/05-neuromorfni-cipovi}
+% OPCIONALNO
+%\input{sections/06-veza-s-programskim-jezicima}
+
+\input{sections/bibliografija}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREGLED NAREDBI PREDLOŠKA (sve iza \end{document} se ne kompajlira)
+%
+% Specijalni znakovi:  \$ \# \_ \{ \} \textasciitilde \textasciicircum \textbackslash
+% Unicode znak po kodu: \char"0416
+%
+% Kratki listing (do ~10 linija, ne prelama se):
+%   \begin{shortlisting} ... \end{shortlisting}
+% Duži listing:
+%   \begin{lstlisting} ... \end{lstlisting}
+% Jezik listinga: \lstset{language=VHDL}  (ili Verilog, Python, C...)
+%
+% Nabrajanja: enumerate / itemize (predložak ih pravi bez velikih razmaka)
+%
+% Slika iz fajla: \langfigure{ime.png}{0.70}{Naslov slike}{fig:Ime}
+%   (širina relativno u odnosu na papir; oznaka fig:...)
+%   Referenca: Slika \ref{fig:Ime}
+% TikZ crtež (profesor traži da se slike crtaju same, da ne izgledaju kopirane):
+%   \begin{langfiguretikz}[]{0.3}{Naslov}{fig:Ime}
+%     \draw (0,0) circle (1cm);
+%     \node at (0,0) {Me};
+%   \end{langfiguretikz}
+%
+% Jednostavna tabela (redovi odvojeni zarezom, kolone uspravnom crtom; prvi red je
+% zaglavlje; | u polju = \vbr, zarez u polju = \com):
+%   \langsimpletable{4}{Naslov tabele}{tab:Ime}
+%   {
+%   a    | b    | a \&\& b | a \vbr\vbr b ,
+%   true | true | true     | true
+%   }
+% Složenija tabela: table + tabular s \rowcolor{lightgray} za zaglavlje
+%   (primjer u originalnom predlošku).
+%
+% Gramatika:
+%   \begin{grammar}
+%     <A> $\rightarrow$ B | c | d
+%   \end{grammar}
+% Sintaksni dijagram: syntdiag okruženje, ponavljanje u rep, alternative u stack.
+%
+% Formula:
+%   \begin{equation} \label{eqn:Ime}
+%     y = f\left(\sum_{i=1}^{n} w_i x_i + b\right)
+%   \end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

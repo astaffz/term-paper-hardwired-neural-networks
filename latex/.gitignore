@@ -1,0 +1,80 @@
+# LaTeX gitignore for the seminarski (XeLaTeX + latexmk).
+# Track only sources: .tex, .sty, .latexmkrc, images. Everything below is regenerated
+# by compiling OzicaneNeuronskeMreze.tex.
+
+## Build output folder (.latexmkrc sends aux and PDF files here)
+build/
+
+## Compiled paper when the editor runs xelatex directly (skips .latexmkrc and writes
+## next to the .tex). Only PDFs directly in latex/ — figure PDFs in subfolders stay tracked.
+/*.pdf
+
+## Broken LaTeX Workshop out-dir setting creates a folder literally named %OUTDIR%
+%OUTDIR%/
+
+## Core auxiliary files (if something is compiled outside build/)
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents (XeLaTeX writes .xdv before the PDF)
+*.dvi
+*.xdv
+*-converted-to.*
+
+## Bibliography (in case biblatex/BibTeX replaces thebibliography later)
+*.bbl
+*.bbl-SAVE-ERROR
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+## latexmk and SyncTeX (editor <-> PDF jumping)
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Index, listings, nomenclature
+*.idx
+*.ilg
+*.ind
+*.lol
+*.nlo
+*.nls
+
+## TikZ externalization
+*.auxlock
+*.dpth
+*.md5
+*-figure*.pdf
+*-figure*.log
+
+## minted (syntax highlighting via Pygments)
+_minted*/
+*.pyg
+
+## Editor backups and temp files
+*.bak
+*.sav
+*.swp
+*~
+*.tps
+
+## OS files
+Thumbs.db
+desktop.ini
+.DS_Store
